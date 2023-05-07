@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptus</title>
+    <link rel="stylesheet" href="reset.css" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@300&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Vector.svg" alt="Logo de Alura" class="logo">
+        </div>
+    </header>
+    <main>
+        <form class="formulario">
+            <textarea class="texto" id="texto" placeholder="Escriba aquí el mensaje" oninput="this.value= detectar(this.value)" autocomplete="off" required></textarea>
+            <div class="botones">
+                <label for="encriptar" class="requerimiento"><img src="Vector1.svg"> Solo letras minúsculas y sin acentos</label>
+                <input type="button" class="encriptar" value="Encriptar" onclick="encriptar()">
+                <input type="button" class="desencriptar" value="Desencriptar" onclick="desencriptar()">
+            </div>
+        </form>
+        <div class="mostrar-resultado">
+            <div class="sin-mensaje">
+                <img src="Muñeco.svg" alt="Imagen de muñeco con estrellas">
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+            </div>
+            <div class="mensaje">
+                <p class="resultado" id="resultado"></p>
+                <button onclick="copiar()" class="copiar"><p>Copiar</p></button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
